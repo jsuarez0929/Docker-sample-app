@@ -1,0 +1,22 @@
+.item {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(87, 87, 87, 0.45) 0px 1px 5px 0px;
+    border-radius: 6px; 
+    width: auto;
+    height: auto; 
+    padding: 10px;
+    margin: 6px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.item-text {
+    float: left;
+    width: 90%;
+}
+
+.close_icon {
+    float: right;
+}
