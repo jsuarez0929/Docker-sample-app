@@ -1,11 +1,27 @@
-.item {
+.cart{
+    padding: 8px;
+    margin: 6px;
+}
+
+.cart-item {
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(87, 87, 87, 0.45) 0px 1px 5px 0px;
-    border-radius: 6px; 
+    border-radius: 6px;
     width: auto;
-    height: auto; 
+    height: auto;
     padding: 10px;
     margin: 6px;
+}
+
+.cart-text {
+    width: 80%;
+    float: left;
+}
+
+.cart-next-arrow img {
+    height: 20px;
+    width: 20px;
+    float: right;
 }
 
 ul {

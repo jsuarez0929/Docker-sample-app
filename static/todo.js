@@ -20,7 +20,7 @@ function add_item() {
     }
     else {
         append_item(input);
-        document.getElementById('input-text').value = "";        
+        document.getElementById('input-text').value = "";
     }
 }
 
@@ -47,26 +47,26 @@ function append_item(input){
     list = document.getElementById('item-list');
     //Create li elem
     item = document.createElement('li');
-    item.setAttribute("class", "item")
-    
+    item.setAttribute("class", "cart-item")
+
     //create div w img elem
     img = document.createElement('img');
-    img.setAttribute('src','imgs/error.png');
+    img.setAttribute('src','error.png');
     img_div = document.createElement('div');
     img_div.setAttribute('class', 'close_icon');
     img_div.setAttribute('id', 'close-button');
     img_div.appendChild(img);
-    
+
     //create div for text
     txt_div = document.createElement('div');
     txt_div.setAttribute('class', 'item-text');
     txt_div.innerHTML = input;
-    
+
     //create main div and attach text and img
     main_div = document.createElement('div');
     main_div.appendChild(txt_div);
     main_div.appendChild(img_div);
-    
+
     item.appendChild(main_div);
     list.appendChild(item);
 }

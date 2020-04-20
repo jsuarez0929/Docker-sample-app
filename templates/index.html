@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href={{ url_for('static', filename='stylesheet.css') }}>
+        <script type="text/javascript" src={{ url_for('static', filename='todo.js') }}></script>
+    </head>
+
+    <body>
+        <div id="container">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Groceries</a>
+            </nav>
+            <div class="col-sm-4">
+                <ul id="item-list" class="list-group">
+                    {% for cart in carts %}
+                        <li class="cart">
+                            <div class="card">
+                              <div class="card-header">
+                                {{ cart.name }}
+                              </div>
+                              <div class="card-body">
+                                <div class="cart-text">
+                                    <h5 class="card-title">Items: {{ cart.items.length }}</h5>
+                                    <p class="card-text">Created: {{ cart.createdAt }}</p>
+                                </div>
+                                <div class="cart-next-arrow">
+                                    <img src={{ url_for('static', filename='next-arrow-png-5.png') }}>
+                                </div>
+                              </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
